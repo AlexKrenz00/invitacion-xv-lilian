@@ -1,0 +1,225 @@
+.dressSection {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 20px;
+
+  background: transparent;
+}
+
+.dressContent {
+  width: min(620px, 92%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.dressIcon {
+  width: 54px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(216, 190, 122, 0.22);
+
+  border-radius: 50%;
+
+  color: #d8be7a;
+
+  margin-bottom: 24px;
+
+  box-shadow:
+    0 0 30px rgba(216, 190, 122, 0.08);
+}
+
+.dressMini {
+  font-size: 8px;
+  letter-spacing: 0.6em;
+  margin-left: 0.6em;
+
+  color: rgba(225, 231, 244, 0.4);
+}
+
+.dressContent h2 {
+  margin: 12px 0 10px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(60px, 9vw, 110px);
+
+  font-weight: 300;
+
+  letter-spacing: 0.04em;
+
+  background: linear-gradient(
+    100deg,
+    #ffffff,
+    #e8e1cf 30%,
+    #cdb370 55%,
+    #ffffff 80%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: dressShimmer 7s linear infinite;
+}
+
+@keyframes dressShimmer {
+  to {
+    background-position: 250% center;
+  }
+}
+
+.dressLine {
+  width: 260px;
+  max-width: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 10px 0 28px;
+
+  color: rgba(216, 190, 122, 0.75);
+}
+
+.dressLine span {
+  flex: 1;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216, 190, 122, 0.45)
+  );
+}
+
+.dressLine span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(216, 190, 122, 0.45),
+    transparent
+  );
+}
+
+.dressText {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+  font-style: italic;
+
+  color: rgba(228, 232, 242, 0.6);
+
+  margin-bottom: 36px;
+}
+
+.reservedColor {
+  min-width: 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 20px 28px;
+
+  border: 1px solid rgba(216, 190, 122, 0.16);
+
+  background: rgba(255, 255, 255, 0.018);
+
+  backdrop-filter: blur(12px);
+}
+
+.blueDot {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    145deg,
+    #bfe7ff,
+    #76bfea
+  );
+
+  box-shadow:
+    0 0 18px rgba(116, 191, 234, 0.25);
+}
+
+.reservedColor div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 4px;
+}
+
+.reservedColor p {
+  font-size: 7px;
+
+  letter-spacing: 0.35em;
+
+  color: rgba(225, 231, 244, 0.35);
+}
+
+.reservedColor strong {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+
+  color: #dceefe;
+}
+
+.dressNote {
+  margin-top: 24px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  line-height: 1.55;
+
+  color: rgba(224, 229, 240, 0.43);
+}
+
+@media (max-width: 768px) {
+  .dressSection {
+    padding: 90px 16px;
+  }
+
+  .reservedColor {
+    min-width: 0;
+    width: min(320px, 92%);
+  }
+
+  .dressText {
+    font-size: 18px;
+  }
+
+  .dressNote {
+    font-size: 15px;
+  }
+}

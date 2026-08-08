@@ -1,0 +1,168 @@
+.finaleSection {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 120px 20px;
+
+  background: transparent;
+}
+
+.finaleContent {
+  width: min(720px, 94%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.finaleStar {
+  font-size: 28px;
+
+  color: #d8be7a;
+
+  margin-bottom: 24px;
+
+  text-shadow:
+    0 0 15px rgba(216, 190, 122, 0.8),
+    0 0 45px rgba(216, 190, 122, 0.35);
+}
+
+.finaleMini {
+  font-size: 8px;
+
+  letter-spacing: 0.6em;
+
+  margin-left: 0.6em;
+
+  color: rgba(225, 231, 244, 0.4);
+}
+
+.finaleContent h2 {
+  margin: 18px 0 12px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(80px, 12vw, 160px);
+
+  font-weight: 300;
+
+  line-height: 0.9;
+
+  background: linear-gradient(
+    100deg,
+    #ffffff,
+    #e9e2cf 28%,
+    #cdb370 50%,
+    #fff8df 67%,
+    #ffffff
+  );
+
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: finaleShimmer 7s linear infinite;
+}
+
+@keyframes finaleShimmer {
+  to {
+    background-position: 300% center;
+  }
+}
+
+.finaleLine {
+  width: 300px;
+  max-width: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin: 20px 0 28px;
+
+  color: rgba(216, 190, 122, 0.7);
+}
+
+.finaleLine span {
+  flex: 1;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(216, 190, 122, 0.5)
+  );
+}
+
+.finaleLine span:last-child {
+  background: linear-gradient(
+    90deg,
+    rgba(216, 190, 122, 0.5),
+    transparent
+  );
+}
+
+.finalePhrase {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 28px;
+
+  font-style: italic;
+
+  color: rgba(235, 237, 243, 0.72);
+
+  margin-bottom: 22px;
+}
+
+.finaleDate {
+  font-size: 10px;
+
+  letter-spacing: 0.55em;
+
+  margin-left: 0.55em;
+
+  color: rgba(216, 190, 122, 0.65);
+}
+
+.finaleThankYou {
+  margin-top: 38px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 18px;
+
+  color: rgba(224, 229, 240, 0.4);
+}
+
+@media (max-width: 768px) {
+  .finaleSection {
+    padding: 90px 16px;
+  }
+
+  .finaleContent h2 {
+    font-size: clamp(75px, 23vw, 110px);
+  }
+
+  .finalePhrase {
+    font-size: 23px;
+  }
+
+  .finaleThankYou {
+    font-size: 16px;
+  }
+}
+
